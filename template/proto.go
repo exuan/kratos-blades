@@ -144,9 +144,7 @@ message {{ .Name }}sRequest {
 
 message {{ .Name }}sReply {
   int64 total = 1;
-  int64 page = 2;
-  int64 page_size = 3;
-  repeated {{ .Name }}Reply items = 4;
+  repeated {{ .Name }}Reply items = 2;
 }
 
 message {{ .Name }}Reply {

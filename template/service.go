@@ -9,11 +9,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/urfave/cli/v2"
-	"golang.org/x/text/cases"
-	"golang.org/x/text/language"
-
 	"github.com/emicklei/proto"
+	"github.com/urfave/cli/v2"
 )
 
 const serviceTemplate = `
@@ -101,8 +98,6 @@ func (s *{{ .Service }}Service) {{ .Name }}(req {{ if eq .Request $s1 }}*emptypb
 {{- end }}
 {{- end }}
 `
-
-var caser = cases.Title(language.English)
 
 var ServiceCmd = &cli.Command{
 	Name: "service",
